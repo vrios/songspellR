@@ -1,0 +1,32 @@
+Package: songspellR
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Vitor",
+           family = "Passos Rios",
+           role = c("aut", "cre"),
+           email = "vitor.rios@uemg.br",
+           comment = c(ORCID = "https://orcid.org/0000-0001-8945-396X"))
+Description: Automates several tasks in bioacoustic analyses, specially syllable detection and classification, using a simplified and straightforward interface.
+License: GPL-3
+Suggests: 
+    testthat,
+    spelling
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Imports: 
+    tuneR,
+    soundgen,
+    seewave,
+    purrr,
+    stats,
+    grDevices,
+    graphics,
+    magrittr,
+    dplyr,
+    dtw
+URL: https://github.com/vrios/songspellR
+BugReports: https://github.com/vrios/songspellR/issues
+Language: en-US

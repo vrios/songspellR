@@ -4,6 +4,7 @@
 # songspellR
 
 <!-- badges: start -->
+[![DOI](https://zenodo.org/badge/276634269.svg)](https://zenodo.org/badge/latestdoi/276634269)
 
 <!-- badges: end -->
 

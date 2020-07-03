@@ -1,5 +1,6 @@
-## plot spectrograms with syllables
-#' Title
+#' plotSyllables
+#'
+#' plot spectrograms with syllables identified by findSyllables()
 #'
 #' @param syls songs
 #' @param low lowest frequency to plot

@@ -21,7 +21,8 @@
 #'
 #' @examples
 #' \dontrun{
-#' songs = findSyllables(plotSyllables  = F,dir(here::here("inst/extdata"), full.names = TRUE,include.dirs = T), samplingRate = 44100)
+#' songs = findSyllables(plotSyllables  = F,dir(here::here("inst/extdata"),
+#'  full.names = TRUE,include.dirs = T), samplingRate = 44100)
 #'  }
 
 #'

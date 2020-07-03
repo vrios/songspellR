@@ -27,12 +27,11 @@ plotSyllables <- function(syls,low =1000, high =22000, labels = F) {
         720,
       compression = "lzw"
     )
-    if (labels==F){labels = XU$selec}
+   # if (labels==F){labels = XU$selec}
     seewave::spectro(
       wav,
       scale = F,
-      flim =
-        c(0, 22),
+      flim = c(0, 22),
       collevels = seq(-50, 0, 1)
     )
     ys <-
@@ -40,8 +39,8 @@ plotSyllables <- function(syls,low =1000, high =22000, labels = F) {
     text(
       x = XU$start,
       y = ys + 0.2,
-      labels =labels,
-      col = "black"
+      labels = labels,
+      col = "black",cex = 2
     )
     segments(
       x0 = XU$start,

@@ -40,7 +40,7 @@ waveCutter <- function(X # file vector
   }
   wavfilenames <- c()
   specfilenames <- c()
-  waves <-c()
+  waves <-list()
 
 
   ### find sylables in files
@@ -79,7 +79,7 @@ waveCutter <- function(X # file vector
       ### find sections in wave
       wavcut <- seewave::cutw(wav.filter,
         from = start,
-        to = end, output = "wave"
+        to = end, output = "Wave"
       )
       wavcut <- tuneR::normalize(wavcut, unit = as.character(wav@bit))
       sylName <- paste0(originalFileName, "-syl", syl, "-"
@@ -89,7 +89,7 @@ waveCutter <- function(X # file vector
 
       specfilenames <- rbind(specfilenames, newSpecFileName)
       wavfilenames <- rbind(wavfilenames, newWavName)
-      waves <- rbind(waves,wavcut@left)
+      waves <- append(waves,wavcut)
 
       if (write.wavs == T) {
         tuneR::writeWave(object = wavcut, filename = newWavName)
@@ -105,5 +105,5 @@ waveCutter <- function(X # file vector
     }
     XU -> X[X$sound.files == uniq[u],]
   }
-  return(cbind(X, "wave.files" = wavfilenames, "spectrograms" = specfilenames,waves=waves))
+  return(list("selections"=X, "wave.files" = wavfilenames, "spectrograms" = specfilenames,"waves"=waves))
 }

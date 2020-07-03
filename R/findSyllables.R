@@ -1,5 +1,3 @@
-
-#' Find Syllables
 #'Find "syllables" (discrete acoustic events) in animal sounds
 
 #'
@@ -15,8 +13,17 @@
 #' @param windowLength window size for audio events
 #' @param overlap overlap between windows
 #'
-#' @return return syllables
-#' @export
+#' @return Dataframe with following collumns:
+#' "sound.files" : original file from wich syllables were extracted,
+#' "selec" : syllable id, unique inside the sound.file, but not between files,
+#' "start" : syllable start,
+#' "end" : syllable end
+#'
+#' @examples
+#' \dontrun{
+#' songs = findSyllables(plotSyllables  = F,dir(here::here("inst/extdata"), full.names = TRUE,include.dirs = T), samplingRate = 44100)
+#'  }
+
 #'
 
 #' @importFrom magrittr %>%
@@ -29,6 +36,7 @@
 #' @import "purrr"
 #' @import "grDevices"
 #' @import "graphics"
+#' @export
 
 findSyllables <- function(files, low =1000, high =22000, plotSyllables =FALSE,samplingRate =NULL, shortestPause =25, shortestSyl =10, plot =FALSE, sylThres =.50, windowLength =20, overlap = 80) {
   dirs <- unique(dirname(files))

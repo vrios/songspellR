@@ -2,7 +2,7 @@
 % Please edit documentation in R/plotSyllables.R
 \name{plotSyllables}
 \alias{plotSyllables}
-\title{Title}
+\title{plotSyllables}
 \usage{
 plotSyllables(syls, low = 1000, high = 22000, labels = F)
 }
@@ -19,5 +19,5 @@ plotSyllables(syls, low = 1000, high = 22000, labels = F)
 returns nothing
 }
 \description{
-Title
+plot spectrograms with syllables identified by findSyllables()
 }

@@ -2,8 +2,7 @@
 % Please edit documentation in R/findSyllables.R
 \name{findSyllables}
 \alias{findSyllables}
-\title{Find Syllables
-Find "syllables" (discrete acoustic events) in animal sounds}
+\title{Find "syllables" (discrete acoustic events) in animal sounds}
 \usage{
 findSyllables(
   files,
@@ -50,12 +49,12 @@ Dataframe with following collumns:
 "end" : syllable end
 }
 \description{
-Find Syllables
 Find "syllables" (discrete acoustic events) in animal sounds
 }
 \examples{
 \dontrun{
-songs = findSyllables(plotSyllables  = F,dir(here::here("inst/extdata"), full.names = TRUE,include.dirs = T), samplingRate = 44100)
+songs = findSyllables(plotSyllables  = F,dir(here::here("inst/extdata"),
+ full.names = TRUE,include.dirs = T), samplingRate = 44100)
  }
 
 }

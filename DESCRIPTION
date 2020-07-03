@@ -1,6 +1,6 @@
 Package: songspellR
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Automates syllable detection and classification in bioacoustic analyses
+Version: 0.1
 Authors@R: 
     person(given = "Vitor",
            family = "Passos Rios",
@@ -8,7 +8,7 @@ Authors@R:
            email = "vitor.rios@uemg.br",
            comment = c(ORCID = "https://orcid.org/0000-0001-8945-396X"))
 Description: Automates several tasks in bioacoustic analyses, specially syllable detection and classification, using a simplified and straightforward interface.
-License: GPL-3
+License: CC BY 4.0 + file LICENSE
 Suggests: 
     testthat,
     spelling

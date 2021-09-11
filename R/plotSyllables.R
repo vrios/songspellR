@@ -33,7 +33,8 @@ plotSyllables <- function(syls,low =1000, high =22000, labels = F) {
       wav,
       scale = F,
       flim = c(0, 22),
-      collevels = seq(-50, 0, 1)
+      collevels = seq(-50, 0, 1),
+      osc = T
     )
     ys <-
       ((low / 1000) + 1) + stats::rnorm(length(XU$start), 0, 0.3)

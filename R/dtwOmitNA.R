@@ -4,7 +4,7 @@
 #' @param x first time sequence to compare
 #' @param y second time sequence to compare
 #'
-#' @return returns the dinamic time warp distance between the two series
+#' @return returns the dynamic time warp distance between the two series
 #' @export
 #' @import "dtw"
 #' @importFrom stats na.omit

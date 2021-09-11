@@ -12,7 +12,7 @@ dtwOmitNA(x, y)
 \item{y}{second time sequence to compare}
 }
 \value{
-returns the dinamic time warp distance between the two series
+returns the dynamic time warp distance between the two series
 }
 \description{
 DTW Omit NA

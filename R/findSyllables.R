@@ -40,19 +40,26 @@
 #' @export
 
 findSyllables <- function(files, low =1000, high =22000, plotSyllables =FALSE,samplingRate =NULL, shortestPause =25, shortestSyl =10, plot =FALSE, sylThres =.50, windowLength =20, overlap = 80) {
-  dirs <- unique(dirname(files))
-  if (length(dirs) > 1) {
-    stop("All files must be on the same directory")
-  }
+
   if (is.null(samplingRate)) {
     stop("SamplingRate must be supplied")
   }
+  if( !is.character(files) && class(files) != "Wave" && !is.list(files)){
+    stop("files must be : a filename, a liste of filenames, a Wave object or a list of Wave objects")
+  }
 
-  fil <- purrr::map(files, tuneR::readWave)
-  dur <- purrr::map(fil, seewave::duration)
+  if(is.character(files) || is.character(files[[1]])){
+    dirs <- unique(dirname(files))
+    if (length(dirs) > 1) {
+      stop("All files must be on the same directory")
+    }
+    files <- purrr::map(files, tuneR::readWave)
+
+    }
+  dur <- purrr::map(files, seewave::duration)
 
   filtered <- purrr::map(
-    fil,
+    files,
     seewave::ffilter,
     from =
       low, to =

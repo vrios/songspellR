@@ -2,7 +2,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # songspellR
-
+songspelleR development has been put on indefinite hiatus. R packages [soundgen](http://cogsci.se/soundgen.html) and [warbler](https://marce10.github.io/warbleR/) cover all of the intended functionality, and thus should be used instead
 <!-- badges: start -->
 [![DOI](https://zenodo.org/badge/276634269.svg)](https://zenodo.org/badge/latestdoi/276634269)
 
